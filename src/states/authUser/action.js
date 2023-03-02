@@ -26,7 +26,7 @@ function asyncSetAuthUser({ email, password }) {
       const authUser = await api.getOwnProfile();
       dispatch(setAuthUserAction(authUser));
     } catch (error) {
-      toast.error(error.message);
+      alert(error.message);
     }
     dispatch(hideLoading());
   };
@@ -40,7 +40,7 @@ function asyncUnsetAuthUser() {
       dispatch(setAuthUserAction(null));
       api.putAccessToken('');
     } catch (error) {
-      toast.error(error.message);
+      alert(error.message);
     }
     dispatch(hideLoading());
   };
@@ -53,7 +53,7 @@ function asyncRegisterUserAction({ name, email, password }) {
       const response = await api.register({ name, email, password });
       toast.success(response.message);
     } catch (error) {
-      toast.error(error.message);
+      alert(error.message);
     }
     dispatch(hideLoading());
   };

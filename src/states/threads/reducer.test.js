@@ -1,5 +1,5 @@
 /**
- * Skenario Test ThreadsReducer
+ * Test Skenario for threadReducer
  *  - should return the initial state when given by unknown action
  *  - should return the talks when given by RECEIVE_TALKS action
  *  - should return the talks with the new talk when given by ADD_TALK action
@@ -9,9 +9,6 @@
 import threadsReducer from './reducer';
 
 describe('threadsReducer function', () => {
-  /**
-   * Skenario 1
-   */
   it('Return initial state jika unknown action', () => {
     // arrange
     const initialState = [];
@@ -26,9 +23,6 @@ describe('threadsReducer function', () => {
     expect(nextState).toEqual(initialState);
   });
 
-  /**
-   * Skenario 2
-   */
   it('Return data threads jika action SET_THREADS', () => {
     // arrange
     const initialState = [];
@@ -69,9 +63,6 @@ describe('threadsReducer function', () => {
     expect(nextState).toEqual(action.payload.threads);
   });
 
-  /**
-   * Skenario 3
-   */
   it('Return data threads dan thread yang ditambah jika action ADD_THREAD', () => {
     // arrange
     const initialState = [
@@ -122,14 +113,9 @@ describe('threadsReducer function', () => {
     expect(nextState).toEqual([action.payload.thread, ...initialState]);
   });
 
-  /**
-   * Skenario 4
-   * - like, neutral, dislike
-   */
   it('Return data threads dengan vote yang sudah diubah jika action TOGGLE_VOTE_THREAD', () => {
-    /**
-     * Like
-     */
+    // Like
+
     // arrange
     const initialState = [
       {
@@ -165,9 +151,7 @@ describe('threadsReducer function', () => {
       upVotesBy: [action.payload.userId],
     });
 
-    /**
-     * Neutralize
-     */
+    // Netral
 
     // arrange
     action.payload.voteType = 0;
@@ -184,9 +168,8 @@ describe('threadsReducer function', () => {
       upVotesBy: [],
     });
 
-    /**
-     * Dislike
-     */
+    // Dislike
+
     // arrange
     action.payload.voteType = -1;
 

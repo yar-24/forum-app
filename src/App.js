@@ -42,8 +42,8 @@ function App() {
       />
       <Top />
       <header>
-        <Navbar />
         <Loading />
+        <Navbar />
       </header>
       <div className="app-container">
         {!isPreload ? (
