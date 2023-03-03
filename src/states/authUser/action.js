@@ -1,6 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { hideLoading, showLoading } from 'react-redux-loading-bar';
-import { toast } from 'react-toastify';
 import api from '../../utils/api';
 
 const ActionType = {
@@ -51,7 +50,7 @@ function asyncRegisterUserAction({ name, email, password }) {
     dispatch(showLoading());
     try {
       const response = await api.register({ name, email, password });
-      toast.success(response.message);
+      alert(response.message);
     } catch (error) {
       alert(error.message);
     }

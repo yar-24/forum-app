@@ -30,21 +30,21 @@ describe('leaderBoardsReducer function', () => {
         [
             {
                 "user": {
-                  "id": "users-1",
-                  "name": "John Doe",
-                  "email": "john@example.com",
-                  "avatar": "https://generated-image-url.jpg"
+                  "id": "users-k8YTjuIns",
+                  "name": "timbrin1",
+                  "email": "timbrin1n@example.com",
+                  "avatar": "https://ui-avatars.com/api/?name=timbrin1&background=random"
                 },
-                "score": 10
+                "score": 150
               },
               {
                 "user": {
-                  "id": "users-2",
-                  "name": "Jane Doe",
-                  "email": "jane@example.com",
-                  "avatar": "https://generated-image-url.jpg"
+                  "id": "users-UHnsadj0V",
+                  "name": "timbrin2",
+                  "email": "timbrin2@example.com",
+                  "avatar": "https://ui-avatars.com/api/?name=timbrin2&background=random"
                 },
-                "score": 5
+                "score": 50
               }
         ]
         `),

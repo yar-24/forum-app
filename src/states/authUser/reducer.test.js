@@ -28,10 +28,10 @@ describe('authUserReducer function', () => {
       payload: {
         authUser: JSON.parse(`
         {
-            "id": "user-123",
-            "name": "John Doe",
-            "email": "john@example.com",
-            "avatar": "https://generated-image-url.jpg"
+          "id": "users-h8Y7bn0aH",
+          "name": "timbrin3",
+          "email": "timbrin3@example.com",
+          "avatar": "https://ui-avatars.com/api/?name=timbrin3&background=random"
         }
         `),
       },

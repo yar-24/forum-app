@@ -29,10 +29,10 @@ describe('usersReducer function', () => {
       payload: {
         users: [
           {
-            id: 'https://ui-avatars.com/api/?name=Dicoding&background=random',
-            name: 'admin@dicoding.com',
-            email: 'user-6oWew2w2Wx5xLUTU',
-            avatar: 'Dicoding',
+            id: 'user-Dz6EWnbSELlZWX_Z',
+            name: 'timbrin',
+            email: 'timbrin@gmail.com',
+            avatar: 'https://ui-avatars.com/api/?name=timbrin&background=random',
           },
         ],
       },

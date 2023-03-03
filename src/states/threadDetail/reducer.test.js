@@ -29,7 +29,7 @@ describe('threadDetailReducer function', () => {
         body: '<p><strong>Lorem Ipsum</strong>&nbsp;is simply dum…ext of the printing and typesetting industry.</p>',
         category: 'lorem',
         comments: [],
-        createdAt: '023-03-01T05:06:18.685Z',
+        createdAt: '2023-03-01T05:06:18.685Z',
         downVotesBy: [],
         id: 'thread-EtRM-DLppDV6oU45',
         ownerId: 'user-Dz6EWnbSELlZWX_Z',

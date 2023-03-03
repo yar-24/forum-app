@@ -8,8 +8,7 @@ import { asyncSetAuthUser } from '../states/authUser/action';
 
 function LoginPage() {
   const { authUser = null } = useSelector((states) => states);
-  const onLogin = ({ e, email, password }) => {
-    e.preventDefault();
+  const onSubmit = ({ email, password }) => {
     if (!email && !password) {
       Swal.fire({
         icon: 'error',
@@ -33,7 +32,7 @@ function LoginPage() {
   return (
     <div className="login">
       <h2>Login</h2>
-      <LoginInput onLogin={onLogin} />
+      <LoginInput onSubmit={onSubmit} />
       <div className="login__regis">
         <p>Belum punya akun? </p>
         <Link to="/register">Daftar disini</Link>

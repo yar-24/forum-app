@@ -1,39 +1,23 @@
 /* eslint-disable implicit-arrow-linebreak */
 /* eslint-disable react/jsx-curly-newline */
+import { PropTypes } from 'prop-types';
 import React from 'react';
-import { useDispatch } from 'react-redux';
-import Swal from 'sweetalert2';
 import useInput from '../hooks/useInput';
-import { asyncRegisterUserAction } from '../states/authUser/action';
 
-function RegisterInput() {
+function RegisterInput({ onRegister }) {
   const [name, onNameChange] = useInput('');
   const [email, onEmailChange] = useInput('');
   const [password, onPasswordChange] = useInput('');
 
-  const dispatch = useDispatch();
-
-  const onRegister = ({ e }) => {
-    e.preventDefault();
-    if (!name && !email && !password) {
-      Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'name, emai dan password harus di isi!',
-      });
-    } else {
-      dispatch(asyncRegisterUserAction({ name, email, password }));
-    }
-  };
   return (
     <form
-      onSubmit={(e) =>
+      onSubmit={(e) => e.preventDefault(
         onRegister({
-          e,
           name,
           email,
           password,
-        })
+        }),
+      )
       }
     >
       <input
@@ -63,5 +47,9 @@ function RegisterInput() {
     </form>
   );
 }
+
+RegisterInput.propTypes = {
+  onRegister: PropTypes.func.isRequired,
+};
 
 export default RegisterInput;

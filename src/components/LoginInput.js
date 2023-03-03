@@ -2,15 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import useInput from '../hooks/useInput';
 
-function LoginInput({ onLogin }) {
+function LoginInput({ onSubmit }) {
   const [email, onEmailChange] = useInput('');
   const [password, onPasswordChange] = useInput('');
 
   return (
-    <form onSubmit={(e) => onLogin({ e, email, password })}>
+    <form onSubmit={(e) => e.preventDefault(onSubmit({ email, password }))}>
       <input
         className="login__input"
-        type="mail"
+        type="email"
         placeholder="Email"
         value={email}
         onChange={onEmailChange}
@@ -22,7 +22,7 @@ function LoginInput({ onLogin }) {
         value={password}
         onChange={onPasswordChange}
       />
-      <button className="login__btn" type="submit">
+      <button className="login__btn">
         Login
       </button>
     </form>
@@ -30,7 +30,7 @@ function LoginInput({ onLogin }) {
 }
 
 LoginInput.propTypes = {
-  onLogin: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
 };
 
 export default LoginInput;

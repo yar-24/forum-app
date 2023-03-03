@@ -61,7 +61,7 @@ function asyncUserAndThreads() {
       dispatch(setUsers(users));
       dispatch(setThreads(threads));
     } catch (error) {
-      toast.error(error.message);
+      alert(error.message);
     }
     dispatch(hideLoading());
   };
