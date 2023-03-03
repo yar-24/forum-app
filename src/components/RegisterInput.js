@@ -29,7 +29,7 @@ function RegisterInput({ onRegister }) {
       />
       <input
         className="login__input"
-        type="mail"
+        type="email"
         placeholder="Email"
         value={email}
         onChange={onEmailChange}
