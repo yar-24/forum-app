@@ -5,7 +5,7 @@ import React from 'react';
 import useInput from '../hooks/useInput';
 
 function RegisterInput({ onRegister }) {
-  const [name, onNameChange] = useInput('');
+  const [nama, onNamaChange] = useInput('');
   const [email, onEmailChange] = useInput('');
   const [password, onPasswordChange] = useInput('');
 
@@ -13,7 +13,7 @@ function RegisterInput({ onRegister }) {
     <form
       onSubmit={(e) => e.preventDefault(
         onRegister({
-          name,
+          nama,
           email,
           password,
         }),
@@ -24,8 +24,8 @@ function RegisterInput({ onRegister }) {
         className="login__input"
         type="text"
         placeholder="Name"
-        value={name}
-        onChange={onNameChange}
+        value={nama}
+        onChange={onNamaChange}
       />
       <input
         className="login__input"
