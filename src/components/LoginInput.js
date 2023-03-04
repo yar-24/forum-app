@@ -4,10 +4,10 @@ import useInput from '../hooks/useInput';
 
 function LoginInput({ onSubmit }) {
   const [email, onEmailChange] = useInput('');
-  const [password, onPasswordChange] = useInput('');
+  const [pass, onPasswordChange] = useInput('');
 
   return (
-    <form onSubmit={(e) => e.preventDefault(onSubmit({ email, password }))}>
+    <form onSubmit={(e) => e.preventDefault(onSubmit({ email, pass }))}>
       <input
         className="login__input"
         type="email"
@@ -19,7 +19,7 @@ function LoginInput({ onSubmit }) {
         className="login__input"
         type="password"
         placeholder="Password"
-        value={password}
+        value={pass}
         onChange={onPasswordChange}
       />
       <button className="login__btn">
