@@ -2,7 +2,7 @@ import { ActionType } from './action';
 
 function usersReducer(users = [], action = {}) {
   switch (action.type) {
-    case ActionType.SET_USERS:
+    case ActionType.SET_USER:
       return action.payload.users;
     default:
       return users;
