@@ -35,7 +35,7 @@ function Diskusi({ thread, isUpVote, isDownVote }) {
         <p>
           Dibuat oleh
           {' '}
-          <b>{owner.name}</b>
+          <b>{owner?.name}</b>
         </p>
       </div>
       <div
